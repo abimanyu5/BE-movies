@@ -1,7 +1,6 @@
-const users = require('./users');
-const otp = require('./otp');
+const movies = require('./movies');
+
 
 module.exports = {
-    users,
-    otp
+    movies
 }

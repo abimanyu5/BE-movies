@@ -1,0 +1,180 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0",
+      "title": "Movies",
+      "contact": {}
+    },
+    "host": "localhost:5050",
+    "basePath": "/movies",
+    "securityDefinitions": {},
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/create": {
+        "post": {
+          "summary": "create",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "create",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/createrequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/all": {
+        "get": {
+          "summary": "get_movies",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "get_movies",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/update/1": {
+        "put": {
+          "summary": "update_movies",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "update_movies",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/createrequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/one/1": {
+        "get": {
+          "summary": "get_one_movie",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "get_one_movie",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/": {
+        "get": {
+          "summary": "search_by_category",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "search_by_category",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "createrequest": {
+        "title": "createrequest",
+        "example": {
+          "name": "dream man",
+          "description": "movie drama family from 1990",
+          "category": "drama",
+          "thumbnail": "img.png"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "category",
+          "thumbnail"
+        ]
+      }
+    },
+    "tags": [
+      {
+        "name": "Misc",
+        "description": ""
+      }
+    ]
+  }
